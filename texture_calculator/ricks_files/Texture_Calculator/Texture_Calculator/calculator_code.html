@@ -1,0 +1,54 @@
+<p>Use this online tool to calculate a single point texture class based on percent sand, silt, and clay.  Including the optional sand fractions will refine the calculation.<br /><br />
+Or download a Microsoft Excel Macro-enabled spreadsheet to develop total sand, silt, and clay low, representative, and high values using an interactive texture triangle with textures that toggle on and off.<br />
+<a href="/wps/PA_NRCSConsumption/download?cid=nrcs142p2_053196&amp;ext=xlsm">Download Interactive Texture Triangle Excel Version</a> (XLSM; 6.11 MB)
+    </p>
+<script src="texture.js" language="javascript" type="text/javascript"></script><script src="wz_jsgraphics.js" language="javascript" type="text/javascript"></script>
+
+<form name="info">
+<table border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed;" width="690">
+	<tbody>
+		<tr>
+			<td valign="top" width="50%">
+			<p>Percent Sand:<br />
+			<input name="sand" size="20" type="text" /></p>
+
+			<p>*Very Coarse Sand:<br />
+			<input name="vcs" size="20" type="text" value="0" /><br />
+			*Coarse Sand:<br />
+			<input name="cs" size="20" type="text" value="0" /><br />
+			*Medium Sand:<br />
+			<input name="ms" size="20" type="text" value="0" /><br />
+			*Fine Sand:<br />
+			<input name="fs" size="20" type="text" value="0" /><br />
+			*Very Fine Sand:<br />
+			<input name="vfs" size="20" type="text" value="0" /></p>
+			</td>
+			<td valign="top" width="50%">
+			<p>Percent Clay:<br />
+			<input name="clay" size="20" type="text" /></p>
+
+			<p>Graph Color:<br />
+			<select name="color"><option selected="selected" value="red">Red</option><option value="blue">Blue</option><option value="green">Green</option><option value="black">Black</option><option value="yellow">Yellow</option><option value="orange">Orange</option></select><br />
+			<br />
+			<input name="get_type" onclick="checkForm()" type="button" value="Get Type" /> &nbsp; <input type="reset" value="Reset" /><br />
+			Percent Silt:<br />
+			<input name="silt" readonly="true" size="20" type="text" /><br />
+			Texture:<br />
+			<input name="texture" readonly="true" size="20" type="text" /><br />
+			<br />
+			<input name="clear_graph" onclick=";if(canvas)canvas.clear();" type="button" value="Clear Graph" /></p>
+
+			<p><font color="maroon"><em>*Optional</em></font></p>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td valign="top">
+			<div id="myCanvas" style="width: 600px; height: 536px; position: relative;"><img align="right" height="536" name="triangle" src="/Internet/FSE_MEDIA/nrcs142p2_050619.jpg" width="600" /></div>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+</form>
+<script language="javascript">canvas = new jsGraphics("myCanvas");function drawPoint(x, y){        canvas.setColor(document.info.color.options[document.info.color.selectedIndex].value);    var xOff = 570;    var yOff = 482;    var yCoord = parseInt(yOff) - 477*parseFloat(y)*0.01;    var xCoord = parseInt(xOff) - 557*parseFloat(x)*0.01 - 0.5*parseFloat(y)*555*0.01;        canvas.fillEllipse(xCoord,yCoord,10,10);    canvas.paint();    }</script>

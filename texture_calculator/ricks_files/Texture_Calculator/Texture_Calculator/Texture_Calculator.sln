@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C45F0108-7161-414C-BD56-D5E9945AA418}"
+	ProjectSection(SolutionItems) = preProject
+		calculator_code.html = calculator_code.html
+		texture.js = texture.js
+		wz_jsgraphics.js = wz_jsgraphics.js
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {061DBA5A-F79E-45C6-9924-434CE4E64CAF}
+	EndGlobalSection
+EndGlobal
